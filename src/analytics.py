@@ -45,7 +45,7 @@ def revenue_by_region(df):
         .sort_values("total_revenue", ascending=False)
     )
 
-def orders_over_time(df, freq="MS"):
+def orders_over_time(df, freq="M"):
     if "date" not in df.columns:
         return pd.DataFrame()
     ts = df.dropna(subset=["date"]).copy()
